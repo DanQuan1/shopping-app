@@ -115,7 +115,7 @@ const HomeScreen = ({navigation}) => {
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Plant Shop
+            Food Shop
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} />
