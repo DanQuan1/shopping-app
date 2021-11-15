@@ -17,7 +17,7 @@ const width = Dimensions.get('window').width / 2 - 30;
 const HomeScreen = ({navigation}) => {
   const [catergoryIndex, setCategoryIndex] = React.useState(0);
 
-  const categories = ['POPULAR', 'ORGANIC', 'INDOORS', 'SYNTHETIC'];
+  const categories = ['POPULAR', 'ACCESSORIES', 'DETAILS', 'SPECIFICATION'];
 
   const CategoryList = () => {
     return (
