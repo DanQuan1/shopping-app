@@ -11,7 +11,7 @@ import {
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
-import plants from '../../consts/plants';
+import phones from '../../consts/phones';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -40,11 +40,11 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  const Card = ({plant}) => {
+  const Card = ({phones}) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate('Details', plant)}>
+        onPress={() => navigation.navigate('Details', phones)}>
         <View style={style.card}>
           <View style={{alignItems: 'flex-end'}}>
             <View
@@ -54,14 +54,14 @@ const HomeScreen = ({navigation}) => {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: plant.like
+                backgroundColor: phones.like
                   ? 'rgba(245, 42, 42,0.2)'
                   : 'rgba(0,0,0,0.2) ',
               }}>
               <Icon
                 name="favorite"
                 size={18}
-                color={plant.like ? COLORS.red : COLORS.black}
+                color={phones.like ? COLORS.red : COLORS.black}
               />
             </View>
           </View>
@@ -72,13 +72,13 @@ const HomeScreen = ({navigation}) => {
               alignItems: 'center',
             }}>
             <Image
-              source={plant.img}
-              style={{flex: 1, resizeMode: 'contain'}}
+              source={phones.img}
+              style={{flex: 1, height: 500, width: 100, marginRight: 30, marginBottom: 20}}
             />
           </View>
 
           <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10}}>
-            {plant.name}
+            {phones.name}
           </Text>
           <View
             style={{
@@ -87,13 +87,13 @@ const HomeScreen = ({navigation}) => {
               marginTop: 5,
             }}>
             <Text style={{fontSize: 19, fontWeight: 'bold'}}>
-              ${plant.price}
+              ${phones.price}
             </Text>
             <View
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.green,
+                backgroundColor: COLORS.red,
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -113,9 +113,9 @@ const HomeScreen = ({navigation}) => {
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
       <View style={style.header}>
         <View>
-          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
-          <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Food Shop
+          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to Tulip's</Text>
+          <Text style={{fontSize: 30, color: COLORS.red, fontWeight: 'bold'}}>
+            Phones & Accessories
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} />
@@ -138,9 +138,9 @@ const HomeScreen = ({navigation}) => {
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={plants}
+        data={phones}
         renderItem={({item}) => {
-          return <Card plant={item} />;
+          return <Card phones={item} />;
         }}
       />
     </SafeAreaView>
@@ -156,10 +156,10 @@ const style = StyleSheet.create({
   },
   categoryText: {fontSize: 16, color: 'grey', fontWeight: 'bold'},
   categoryTextSelected: {
-    color: COLORS.green,
+    color: COLORS.red,
     paddingBottom: 5,
     borderBottomWidth: 2,
-    borderColor: COLORS.green,
+    borderColor: COLORS.red,
   },
   card: {
     height: 225,
@@ -194,7 +194,7 @@ const style = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 10,
-    backgroundColor: COLORS.green,
+    backgroundColor: COLORS.red,
     justifyContent: 'center',
     alignItems: 'center',
   },

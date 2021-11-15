@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 
 const DetailsScreen = ({navigation, route}) => {
-  const plant = route.params;
+  const phones = route.params;
 
   return (
     <SafeAreaView
@@ -17,7 +17,7 @@ const DetailsScreen = ({navigation, route}) => {
         <Icon name="shopping-cart" size={28} />
       </View>
       <View style={style.imageContainer}>
-        <Image source={plant.img} style={{resizeMode: 'contain', flex: 1}} />
+        <Image source={phones.img} style={{height: 250, width: 220, resizeMode: 'contain', flex: 1, borderRadius: 20}} />
       </View>
       <View style={style.detailsContainer}>
         <View
@@ -37,7 +37,7 @@ const DetailsScreen = ({navigation, route}) => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{plant.name}</Text>
+          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{phones.name}</Text>
           <View style={style.priceTag}>
             <Text
               style={{
@@ -46,7 +46,7 @@ const DetailsScreen = ({navigation, route}) => {
                 fontWeight: 'bold',
                 fontSize: 16,
               }}>
-              ${plant.price}
+              ${phones.price}
             </Text>
           </View>
         </View>
@@ -59,7 +59,7 @@ const DetailsScreen = ({navigation, route}) => {
               lineHeight: 22,
               marginTop: 10,
             }}>
-            {plant.about}
+            {phones.about}
           </Text>
           <View
             style={{
@@ -143,13 +143,13 @@ const style = StyleSheet.create({
   buyBtn: {
     width: 130,
     height: 50,
-    backgroundColor: COLORS.green,
+    backgroundColor: COLORS.red,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
   },
   priceTag: {
-    backgroundColor: COLORS.green,
+    backgroundColor: COLORS.red,
     width: 80,
     height: 40,
     justifyContent: 'center',
