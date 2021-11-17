@@ -14,6 +14,21 @@ export default function Login(params) {
         justifyContent: "center",
         alignItems: "center",
       }}
+      {
+        export default function Create Account(params) {
+          const navigation = params.navigation;
+
+          return (
+            <view
+            style={{
+              backgroundColor: "white",
+              flex: 1,
+              paddingHorizontal: 20,
+              justifyContent: "center",
+              alignItems: "center",
+          
+        }
+      }
     >
       <Image
         style={{
