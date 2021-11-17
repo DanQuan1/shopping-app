@@ -14,21 +14,6 @@ export default function Login(params) {
         justifyContent: "center",
         alignItems: "center",
       }}
-      {
-        export default function Create Account(params) {
-          const navigation = params.navigation;
-
-          return (
-            <view
-            style={{
-              backgroundColor: "white",
-              flex: 1,
-              paddingHorizontal: 20,
-              justifyContent: "center",
-              alignItems: "center",
-          
-        }
-      }
     >
       <Image
         style={{
@@ -89,6 +74,26 @@ export default function Login(params) {
         <AntDesign name="apple1" size={24} color="white" />
         <Text style={{ paddingLeft: 10, color: "white" }}>Login</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Signup");
+        }}
+        style={{
+          padding: 15,
+          paddingHorizontal: 80,
+          marginTop: 10,
+          alignItems: "center",
+          borderRadius: 10,
+          flexDirection: "row",
+          backgroundColor: "black",
+        }}
+      >
+        
+        <Text style={{ paddingLeft: 10, color: "white" }}>Create Account</Text>
+      </TouchableOpacity>
     </View>
+
+    
   );
 }

@@ -6,7 +6,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 const Stack = createStackNavigator();
 import HomeScreen from './src/view/screens/HomeScreen';
 import DetailsSceeen from './src/view/screens/DetailsScreen';
-import LoginScreen from './src/view/screens/LoginScreen'
+import LoginScreen from './src/view/screens/LoginScreen';
+import SignupScreen from './src/view/screens/SignupScreen';
 import {StatusBar} from 'react-native';
 import COLORS from './src/consts/colors';
 
@@ -18,6 +19,7 @@ const App = () => {
         <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsSceeen} />
+        <Stack.Screen name="Signup" component={SignupScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
